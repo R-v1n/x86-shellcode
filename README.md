@@ -1,5 +1,5 @@
 # x86-shellcode
-* x86 shellcode to invoke shell
+* x86 shellcode to spawn shell
 * reverse_tcp program in c
 * x86 reverse tcp shellcode
 
