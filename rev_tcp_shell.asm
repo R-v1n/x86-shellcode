@@ -27,7 +27,7 @@ push edx
 ;padding======
 
 ;struct sock_addr_in----------------                        
-push word ;enter ip      ;ip        
+push word ;enter ip      ;ip   [NOTE]: be careful of null bytes in ip address :)     
 push word ;enter port    ;Port       
 push word  0x02          ;AF_INET ipv4 <family>
 ;struct pushed to stack-------------
