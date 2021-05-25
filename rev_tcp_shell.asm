@@ -31,8 +31,9 @@ push word ;enter ip      ;ip   [NOTE]: be careful of null bytes in ip address :)
 ;in case of nullbytes use ======================
 ;xor hex(ip) with another hex(A)  -> hex(B)=hex(ip) xor hex(A) [ hex(A) and hex(B) should be null free]
 ;[operations like add and sub can also be used< xor is used coz xor ing is fast ;)>]
-;mov eax, ;hex(B)                                          
-;xor eax, ;hex(A)                                              
+;mov eax,      ;hex(B)                                          
+;mov ebx,      ;hex(A)
+;xor eax,ebx   ;hex(B) xor hex(A)
 ;push eax ;:)                                                 
 ;===============================================
 push word ;enter port    ;Port       
