@@ -29,9 +29,9 @@ push edx
 ;struct sock_addr_in----------------                        
 push word ;enter ip      ;ip   [NOTE]: be careful of null bytes in ip address :)     
 ;in case of nullbytes use ======================
-;xor hex(ip) with another hex(A)  -> B=hex(ip) xor hex(A) 
-;mov eax, ;B                                          
-;xor eax, ;A                                              
+;xor hex(ip) with another hex(A)  -> hex(B)=hex(ip) xor hex(A) [ hex(A) and hex(B) should be null free]
+;mov eax, ;hex(B)                                          
+;xor eax, ;hex(A)                                              
 ;push eax ;:)                                                 
 ;===============================================
 push word ;enter port    ;Port       
