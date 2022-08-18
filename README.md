@@ -1,5 +1,5 @@
 # x86-shellcode
-* x86 shellcode to spawn shell [ **25 bytes** ] written from TeamFaux CTF Team : )
+* x86 shellcode to spawn shell [ **25 bytes** ] written for TeamFaux CTF Team : )
 * reverse_tcp program in c
 * x86 reverse tcp shellcode   
   * tcp_shell for ip with no null bytes [ **91 bytes** ]
